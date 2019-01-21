@@ -68,6 +68,9 @@ echo -e "\n------------------ change VNC password  ------------------"
 mkdir -p "$HOME/.vnc"
 PASSWD_PATH="$HOME/.vnc/passwd"
 
+# This is a hack to make xfce work
+cp ${HOME}/xstartup ${HOME}/.vnc
+
 if [[ -f $PASSWD_PATH ]]; then
     echo -e "\n---------  purging existing VNC password settings  ---------"
     rm -f $PASSWD_PATH

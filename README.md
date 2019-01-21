@@ -10,7 +10,9 @@ Each Docker image is installed with the following components:
 * Browsers:
   * Mozilla Firefox
   * Chromium
-  
+* LibreOffice
+* emacs
+y  
 ![Docker VNC Desktop access via HTML page](.pics/vnc_container_view.png)
 
 ## Build Status
@@ -51,6 +53,10 @@ Usage is **similar** for all provided images, e.g. for `consol/centos-xfce-vnc`:
 
       docker run -d -p 5901:5901 -p 6901:6901 consol/centos-xfce-vnc
   
+- Run command as above, but with a bind mount to a directory shared on the host:
+
+      docker run -d -p 5901:5901 -p 6901:6901 --mount type=bind,src="$(pwd)"/data,target=/home/docker/data consol/centos-xfce-vnc
+
 - Change the default user and group within a container to your own with adding `--user $(id -u):$(id -g)`:
 
       docker run -d -p 5901:5901 -p 6901:6901 --user $(id -u):$(id -g) consol/centos-xfce-vnc

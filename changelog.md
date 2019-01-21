@@ -1,5 +1,18 @@
 ## Changelog of the Docker headless VNC images
 
+	
+### Version 1.0:
+* Added docker user who is wheel group member
+* Install emacs, libreoffice, sudo
+* Added a hack to vnc_startup.sh to copy my own xstartup file to docker's .vnc directory
+
+
+	
+##################################################################	
+# This is a fork of version 1.4.0 below.
+# Start versioning of fork at 1.0
+##################################################################	
+	
 ### Version 1.4.0:
 * added Github issue and pull request templates
 * added install script for custom fonts ([#83](https://github.com/ConSol/docker-headless-vnc-container/issues/83)))
